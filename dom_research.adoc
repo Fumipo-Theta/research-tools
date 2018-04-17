@@ -1,0 +1,31 @@
+
+== 研究活動の構成要素
+
+Documentation:: 研究内容を文書でまとめる
+Presentation:: 研究内容の発表
+Idea Processing:: 研究アイデア・実験記録
+Data:: データの収集・編集・管理
+Analysis:: データの解析
+Visualization:: データ・解析・研究内容の可視化
+Reference management:: 先行研究の収集と管理
+Versioning:: 研究状態の管理
+
+== スムーズな研究のために
+
+データの構成と有用なツールを紹介
+
+[simple]
+* Documentation, Presentation 
+  ** コンテンツとスタイルの分離
+  ** 論理構造の可視化
+  ** 英文執筆支援
+* Data, Analysis, Visualization, Idea Processing
+  ** 機械可読性
+  ** 不変/一時データ
+  ** データ・処理の再利用可能性
+  ** 文書・データ・処理の統合
+* Reference management
+  ** 文献リストの自動生成
+* Versioning
+  ** データ・分析・文章の変更を可逆に
+
