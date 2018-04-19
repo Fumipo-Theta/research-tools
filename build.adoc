@@ -1,0 +1,27 @@
+= 複数のドキュメントの統合
+:toc: left
+
+include::dom_research.adoc[]
+include::dom_analysis.adoc[[]]
+include::dom_data.adoc[]
+include::dom_documentation.adoc[]
+include::dom_ideaProcessing.adoc[]
+include::dom_presentation.adoc[]
+include::dom_referenceManagement.adoc[]
+include::dom_versioning.adoc[]
+include::dom_visualization.adoc[]
+
+include::data_dataset.adoc[]
+include::data_markup.adoc[]
+include::data_sourcecode.adoc[]
+
+include::tool_excel.adoc[]
+include::tool_fgraph.adoc[]
+include::tool_fumipos.adoc[]
+include::tool_git.adoc[]
+include::tool_grammarly.adoc[]
+include::tool_jupyter.adoc[]
+include::tool_powerpoint.adoc[]
+include::tool_rstudio.adoc[]
+include::tool_vscode.adoc[]
+include::tool_word.adoc[]
