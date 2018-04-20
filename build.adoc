@@ -1,5 +1,13 @@
 = 複数のドキュメントの統合
 :toc: left
+:stem: latexmath
+
+this is inline equation \(y = a \left( x-2 \right)\), and 
+the below is block equation
+\[y = \int x dx\]
+
+
+
 
 include::dom_research.adoc[]
 include::dom_analysis.adoc[[]]
