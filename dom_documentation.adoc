@@ -1,4 +1,3 @@
-:doctype: book
 
 == Documentation
 
@@ -25,7 +24,7 @@
 . Wordファイルに変換して文章校正・WYSWYG環境での編集を行う
 
 .文章の構造を含むデータ
-latexmath:[\TeX{}]::
+\(\TeX{}\)::
   ** 文章のコンテンツと, 構造・スタイルを指定するコマンドをテキストで記述する
   ** 後からpdfファイルなどにコンパイルする
 マークアップ言語::
@@ -38,7 +37,7 @@ latexmath:[\TeX{}]::
   image:https://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg[grammarly, height=50]
 
 数式組版ツール::
-  最新バージョンのWordでlatexmath:[\TeX{}]の記法が使えるようになる予定
+  最新バージョンのWordで\(\TeX{}\)の記法が使えるようになる予定
 
 連番などの自動付与::
   操作が複雑だが, デフォルト機能で挿入可能

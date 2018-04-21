@@ -1,0 +1,29 @@
+
+== 研究のバージョン管理
+
+* 以前の状態に復元できるか
+* 何を変更したか思い出せるか
+* バージョン間の関係はどうなっているか
+
+.バージョンの乱立
+----
+analysis_original.xlsx
+
+analysis_2018_0422.xlsx
+analysis_2018_0422_modified.xlsx
+
+analysis_2018_0423.xlsx
+analysis_2018_0423_modified.xlsx
+analysis_2018_0423_test.xlsx
+analysis_2018_0423_modified_test.xlsx
+...
+----
+
+== バージョン管理への欲求
+
+* ファイルをいたずらに増やしたくない
+* 時系列に沿った全ての変更履歴がほしい
+* 枝分かれするバージョン間の親子関係を知りたい
+
+
+
