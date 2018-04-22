@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<meta name="author" content="Fumitoshi Morisato">
+<title>研究活動で有用なツール</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:initial}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>研究活動で有用なツール</h1>
+<div class="details">
+<span id="author" class="author">Fumitoshi Morisato</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_研究活動の構成要素">研究活動の構成要素</a></li>
+<li><a href="#_スムーズな研究のために">スムーズな研究のために</a></li>
+<li><a href="#_documentation">Documentation</a></li>
+<li><a href="#_wordの利点と欠点">Wordの利点と欠点</a></li>
+<li><a href="#_word">Word</a></li>
+<li><a href="#_wordをより便利にするツール">Wordをより便利にするツール</a></li>
+<li><a href="#_grammarly">Grammarly</a></li>
+<li><a href="#_思考内容をまとめるために">思考内容をまとめるために</a>
+<ul class="sectlevel2">
+<li><a href="#_コンテンツの集合が成す有向グラフ">コンテンツの集合が成す有向グラフ</a></li>
+<li><a href="#_文書執筆に集中するために">文書執筆に集中するために</a></li>
+<li><a href="#_コンテンツと構造の記述が容易なデータ">コンテンツと構造の記述が容易なデータ</a></li>
+</ul>
+</li>
+<li><a href="#_文章のコンテンツ_構造を含むデータ">文章のコンテンツ・構造を含むデータ</a>
+<ul class="sectlevel2">
+<li><a href="#_markup言語の例">Markup言語の例</a></li>
+<li><a href="#_マークアップ言語間の構文_表現力の違い">マークアップ言語間の構文・表現力の違い</a></li>
+</ul>
+</li>
+<li><a href="#_文書のスタイル">文書のスタイル</a></li>
+<li><a href="#_マークアップ言語間の変換">マークアップ言語間の変換</a></li>
+<li><a href="#_visual_studio_code">Visual studio code</a></li>
+<li><a href="#_データ">データ</a></li>
+<li><a href="#_データ管理">データ管理</a></li>
+<li><a href="#_分析_解析">分析・解析</a></li>
+<li><a href="#_excelの利点と欠点">Excelの利点と欠点</a></li>
+<li><a href="#_プログラミングによる解決">プログラミングによる解決</a></li>
+<li><a href="#_visualization">Visualization</a></li>
+<li><a href="#_excelの利点と欠点_2">Excelの利点と欠点</a></li>
+<li><a href="#_プログラミングコードの産物としての可視化">プログラミングコードの産物としての可視化</a></li>
+<li><a href="#_あるべきデータセットの構造">あるべきデータセットの構造</a></li>
+<li><a href="#_データセットの形式">データセットの形式</a></li>
+<li><a href="#_研究に有用なプログラミング言語">研究に有用なプログラミング言語</a></li>
+<li><a href="#_jupyter">Jupyter</a></li>
+<li><a href="#_記録ツールとしてのjupyter_notebook">記録ツールとしてのJupyter notebook</a></li>
+<li><a href="#_r_studio">R studio</a></li>
+<li><a href="#_多次元データの可視化">多次元データの可視化</a></li>
+<li><a href="#_fumiposでの実装例">FUMIPOSでの実装例</a></li>
+<li><a href="#_文献管理">文献管理</a></li>
+<li><a href="#_bibtex">BiBTeX</a></li>
+<li><a href="#_研究のバージョン管理">研究のバージョン管理</a></li>
+<li><a href="#_バージョン管理への欲求">バージョン管理への欲求</a></li>
+<li><a href="#_git">Git</a></li>
+<li><a href="#_概要_2">概要</a></li>
+<li><a href="#_gitの利用例">Gitの利用例</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_研究活動の構成要素">研究活動の構成要素</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Documentation</dt>
+<dd>
+<p>研究内容を文書でまとめる</p>
+</dd>
+<dt class="hdlist1">Presentation</dt>
+<dd>
+<p>研究内容の発表</p>
+</dd>
+<dt class="hdlist1">Idea Processing</dt>
+<dd>
+<p>研究アイデア・実験記録</p>
+</dd>
+<dt class="hdlist1">Data</dt>
+<dd>
+<p>データの収集・編集・管理</p>
+</dd>
+<dt class="hdlist1">Analysis</dt>
+<dd>
+<p>データの解析</p>
+</dd>
+<dt class="hdlist1">Visualization</dt>
+<dd>
+<p>データ・解析・研究内容の可視化</p>
+</dd>
+<dt class="hdlist1">Reference management</dt>
+<dd>
+<p>先行研究の収集と管理</p>
+</dd>
+<dt class="hdlist1">Versioning</dt>
+<dd>
+<p>研究状態の管理</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<div class="title">まとめると</div>
+<p>先行研究, データ, 試行錯誤の手段と結果といった情報の統合</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_スムーズな研究のために">スムーズな研究のために</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>データの構成と有用なツールを紹介</p>
+</div>
+<div class="ulist simple">
+<ul class="simple">
+<li>
+<p>Documentation, Presentation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>コンテンツとスタイルの分離</p>
+</li>
+<li>
+<p>論理構造の可視化</p>
+</li>
+<li>
+<p>英文執筆支援</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Data, Analysis, Visualization, Idea Processing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>機械可読性</p>
+</li>
+<li>
+<p>不変/一時データ</p>
+</li>
+<li>
+<p>データ・処理の再利用可能性</p>
+</li>
+<li>
+<p>文書・データ・処理の統合</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Reference management</p>
+<div class="ulist">
+<ul>
+<li>
+<p>文献リストの自動生成</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Versioning</p>
+<div class="ulist">
+<ul>
+<li>
+<p>データ・分析・文章の変更を可逆に</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_documentation">Documentation</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<div class="title">ドキュメントの構成要素</div>
+<ol class="arabic">
+<li>
+<p>内容(コンテンツ)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>テキスト</p>
+</li>
+<li>
+<p>数式</p>
+</li>
+<li>
+<p>図・表</p>
+</li>
+<li>
+<p>データ処理手法と結果</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>構造(アウトライン)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>タイトル・セクション・見出し・段落</p>
+</li>
+<li>
+<p>引用先</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>見た目(スタイル・レイアウト)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>フォント, サイズ</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wordの利点と欠点">Wordの利点と欠点</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">利点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>WYSWYG (What You See is What You Get)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>文書のスタイリング・レイアウトが容易で自由度が高い</p>
+</li>
+<li>
+<p>ドキュメントに図や表を表示可能</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>校正機能が充実</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">欠点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>アウトライン作成・スタイル設定の自動化が大変(意識しなければ)</p>
+</li>
+<li>
+<p>図・表の変更の自動反映ができない</p>
+</li>
+<li>
+<p>数式の記述が独特</p>
+</li>
+<li>
+<p>変数を用いた自動的な処理が大変</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>ドキュメントの校正や最終調整に適する一方, ドキュメント作成時にはコンテンツ以外のことにも注意を向ける必要がある</p>
+</div>
+<div class="paragraph">
+<div class="title">欠点の改善手段</div>
+<p>コンパイル・ファイル変換の手間をかける. その代わりに</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>文章の構造をテキストで簡便に表現できるデータを用いる</p>
+</li>
+<li>
+<p>スタイルを分離し, 再利用可能にする</p>
+</li>
+<li>
+<p>Wordファイルに変換して文章校正・WYSWYG環境での編集を行う</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>コンテンツ・構造の記述を簡潔にできないか ?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_word">Word</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>image::./image/Word.png[Word,height=64] Wordをうまく使う</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>スタイルの適用とアウトライン</p>
+<div class="ulist">
+<ul>
+<li>
+<p>見出しや段落, 図のキャプションなどのスタイルを指定できる<br>
+見た目を一括で変更できる</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>変数の使用</p>
+<div class="ulist">
+<ul>
+<li>
+<p>図表番号など, 連番を自動で振る機能がある</p>
+</li>
+<li>
+<p>表記が変わる可能性がある語句について, ブックマーク(相互参照)を挿入すれば, 参照元の1箇所のみの変更で全体に反映できる</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>数式</p>
+<div class="ulist">
+<ul>
+<li>
+<p>\(\LaTeX{}\)の記法が使えるようになる</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wordをより便利にするツール">Wordをより便利にするツール</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">英文校正ツール</dt>
+<dd>
+<p><span class="image"><img src="https://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" alt="grammarly" height="50"></span></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grammarly">Grammarly</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="https://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" alt="Grammarly" height="64">
+</div>
+</div>
+<div class="ulist">
+<div class="title">特徴</div>
+<ul>
+<li>
+<p>オンラインの英文のスペル・構文チェックサービス</p>
+</li>
+<li>
+<p>Word, Chrome対応の拡張機能あり</p>
+</li>
+<li>
+<p>無料版でも多くの文法上のミスを訂正可能</p>
+<div class="ulist">
+<ul>
+<li>
+<p>間違いの理由も表示</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>有料版では機能が増える</p>
+<div class="ulist">
+<ul>
+<li>
+<p>論文やビジネスなど状況に合わせた修正案の提示</p>
+</li>
+<li>
+<p>語彙の提案</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><a href="https://www.grammarly.com/">Grammarly: Free Writing Assistant</a></p>
+</div>
+</blockquote>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./image/2018-04-22-15-45-33.png" alt="2018 04 22 15 45 33">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_思考内容をまとめるために">思考内容をまとめるために</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">ドキュメント作成時に記録すること</div>
+<ul>
+<li>
+<p>コンテンツの内容</p>
+</li>
+<li>
+<p>コンテンツの構造</p>
+</li>
+<li>
+<p>コンテンツ間の関係</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_コンテンツの集合が成す有向グラフ">コンテンツの集合が成す有向グラフ</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>論理構造</p>
+</li>
+<li>
+<p>データ・処理・結果の依存関係</p>
+</li>
+<li>
+<p>文献間の引用関係</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_文書執筆に集中するために">文書執筆に集中するために</h3>
+<div class="ulist dense">
+<ul class="dense">
+<li>
+<p>内容・構造と, 見た目を分離</p>
+</li>
+<li>
+<p>図・表の変更を自動反映</p>
+</li>
+<li>
+<p>数式組版を簡潔に</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_コンテンツと構造の記述が容易なデータ">コンテンツと構造の記述が容易なデータ</h3>
+<div class="ulist">
+<div class="title">軽量マークアップ言語</div>
+<ul>
+<li>
+<p>Markdown</p>
+</li>
+<li>
+<p>Asciidoc</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_文章のコンテンツ_構造を含むデータ">文章のコンテンツ・構造を含むデータ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ドキュメントのコンテンツと構造を含むデータ</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">コンテンツ</dt>
+<dd>
+<p>文字列や数値, 図表など</p>
+</dd>
+<dt class="hdlist1">構造</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>セクション, 見出しや段落などの文章構造</p>
+</li>
+<li>
+<p>強調や引用などの文脈</p>
+</li>
+<li>
+<p>ハイパーリンクやインタラクティビティなどの機能</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="ulist simple">
+<ul class="simple">
+<li>
+<p>ドキュメント</p>
+<div class="ulist">
+<ul>
+<li>
+<p>内容・構造を表すデータ</p>
+</li>
+<li>
+<p>図・表などの外部メディア</p>
+</li>
+<li>
+<p>スタイル・レイアウトを表すデータ</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_markup言語の例">Markup言語の例</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Word (XML)</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Wordのdocxファイルは, 文章のコンテンツ・構造を担うファイルと<br>
+スタイルを表すファイルが一まとめになっている</p>
+</li>
+<li>
+<p>実際に, Wordには文書のアウトライン作成・スタイリング機能がついている</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">\(\TeX{}\)</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\section{}</code> のようなコマンドで構造を示す</p>
+</li>
+<li>
+<p>ページレイアウトなど詳細な組版ができる</p>
+</li>
+<li>
+<p>コンパイルしないと見た目が分からない</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">HTML</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;p&gt; ～ &lt;/p&gt;</code> のようなタグで構造を示す</p>
+</li>
+<li>
+<p>Webブラウザ上で見た目を確認できる</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Markdown</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>簡潔な表記法でマークアップ文書を表現可能</p>
+</li>
+<li>
+<p>人間にも読みやすい</p>
+</li>
+<li>
+<p>HTMLやWordファイルに変換が必要</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Asciidoc</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>人間の可読性を保ちつつ, Markdownに機能を追加</p>
+</li>
+<li>
+<p>HTMLやWordファイルに変換が必要</p>
+</li>
+<li>
+<p><strong>このスライドはAsciidocで記述しています</strong></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="title">\(\LaTeX{}\)による記述例</div>
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\documentclass{jsarticle}
+\begin{document}
+
+\title{惑星分化セミナー}
+\author{森里文哉}
+\maketitle
+
+\section{はじめに}
+
+この文書は，ごく基本的なレポートや論文の例を示すものです。
+実際にこのソースを入力してタイプセット（コンパイル）し，
+タイトル，著者名，本文，見出し，箇条書きがどのように表示されるかを
+確認してみましょう。
+
+\section{見出し}
+
+この文書の先頭にはタイトル，著者名，日付が出力されています。
+特定の日付を指定することもできます。
+
+そして，セクションの見出しが出力されています。
+セクションの番号は自動的に付きます。
+
+\section{箇条書き}
+
+以下は箇条書きの例です。これは番号を振らない箇条書きです。
+
+\begin{itemize}
+  \item アイテム
+  \item アイテム
+\end{itemize}
+
+これは番号を振る箇条書きです。
+
+\begin{enumerate}
+  \item 富士
+  \item 鷹
+  \item なすび
+\end{enumerate}
+
+\section{おわりに}
+
+これは一段組の例ですが，二段組に変更することもできます。
+
+解説文を読んで，このソースをいろいろと変更してみましょう。
+
+\end{document}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Asciidocによる記述例</div>
+<div class="content">
+<pre class="highlight"><code class="language-markdown" data-lang="markdown">= タイトル
+
+== 見出し1
+
+ここは段落です. 図を入れたいときは次のコマンドを入れます.
+
+image::image_name.png[Image title, width, height]
+
+これは「image_name.png」というファイル名の画像を
+挿入することを宣言しているだけです.
+従って, この画像の元ファイルの更新は,
+文書のコンパイル時に自動的に反映されることになります.
+
+順序なしリストは以下のように書きます.
+
+* アイテム1
+* アイテム2
+  ** アイテム2-1
+  ** アイテム2-2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_マークアップ言語間の構文_表現力の違い">マークアップ言語間の構文・表現力の違い</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ソースコード</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">レンダリング例</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="title">HTMLとブラウザでの表示例</div>
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;h2&gt;HTMLドキュメントの例&lt;/h2&gt;
+&lt;section&gt;
+  &lt;h3&gt;概要&lt;/h3&gt;
+  &lt;p&gt;
+    このサブセクションでは&lt;em&gt;HTML文書&lt;/em&gt;について述べている.
+  &lt;/p&gt;
+  &lt;p&gt;
+    初めに歴史的経緯を述べる.
+  &lt;/p&gt;
+
+  &lt;h3&gt;構造&lt;/h3&gt;
+  &lt;p&gt;
+    ここではHTML文書の構造を説明する.
+    HTMLは大きく分けて2つの要素からなる.
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      文書のコンテンツ: これは文字列やリスト,
+      表の数値などデータの値そのものを表す
+    &lt;/li&gt;
+    &lt;li&gt;
+      文章の構造: "HTMLタグ"と呼ばれる,
+      ドキュメントの構造や文脈を示す文字列.
+      ドキュメントの装飾や機能の追加に使われる場合もある
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="sect1">
+<h2 id="_htmlドキュメントの例">HTMLドキュメントの例</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_概要">概要</h3>
+<div class="paragraph">
+<p>このサブセクションでは<strong>HTML文書</strong>について述べている.</p>
+</div>
+<div class="paragraph">
+<p>初めに歴史的経緯を述べる,</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_構造">構造</h3>
+<div class="paragraph">
+<p>ここではHTML文書の構造を説明する. HTMLは大きく分けて2つの要素からなる.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>文書のコンテンツ: これは文字列やリスト, 表の数値などデータの値そのものを表す</p>
+</li>
+<li>
+<p>文章の構造: "HTMLタグ"と呼ばれる, ドキュメントの構造や文脈を示す文字列.<br>
+ドキュメントの装飾や機能の追加に使われる場合もある</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. HTMLとAsciidoc</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Asciidoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html">&lt;h2&gt;HTMLドキュメントの例&lt;/h2&gt;
+&lt;section&gt;
+  &lt;h3&gt;概要&lt;/h3&gt;
+  &lt;p&gt;
+    このサブセクションでは&lt;em&gt;HTML文書&lt;/em&gt;について述べている.
+  &lt;/p&gt;
+  &lt;p&gt;
+    初めに歴史的経緯を述べる.
+  &lt;/p&gt;
+
+  &lt;h3&gt;構造&lt;/h3&gt;
+  &lt;p&gt;
+    ここではHTML文書の構造を説明する.
+    HTMLは大きく分けて2つの要素からなる.
+  &lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+        文書のコンテンツ: これは文字列やリスト,
+        表の数値などデータの値そのものを表す
+    &lt;/li&gt;
+    &lt;li&gt;
+      文章の構造: "HTMLタグ"と呼ばれる,
+      ドキュメントの構造や文脈を示す文字列.
+      ドキュメントの装飾や機能の追加に使われる場合もある
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-markdown" data-lang="markdown">== HTMLドキュメントの例
+
+=== 概要
+
+このサブセクションでは**HTML文書**について述べている.
+
+初めに歴史的経緯を述べる,
+
+=== 構造
+
+ここではHTML文書の構造を説明する.
+HTMLは大きく分けて2つの要素からなる.
+
+. 文書のコンテンツ: これは文字列やリスト,
+                 表の数値などデータの値そのものを表す
+. 文章の構造: "HTMLタグ"と呼ばれる,
+        ドキュメントの構造や文脈を示す文字列. +
+        ドキュメントの装飾や機能の追加に使われる場合もある</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_文書のスタイル">文書のスタイル</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+マークアップ言語はコンテンツと構造のみを表すデータである
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">文書のスタイル</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>フォント, サイズ, 色, スタイルなど</p>
+</li>
+<li>
+<p>セクションや段落のレイアウトなど</p>
+</li>
+<li>
+<p>ボタンの挙動など</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="ulist">
+<div class="title">スタイルを構造と分離の利点</div>
+<ul>
+<li>
+<p>見た目の一括変更が容易</p>
+</li>
+<li>
+<p>スタイルを他の文書に再利用可能</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_マークアップ言語間の変換">マークアップ言語間の変換</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">変換ツール</div>
+<ul>
+<li>
+<p><a href="http://sky-y.github.io/site-pandoc-jp/users-guide/">Pandoc</a></p>
+</li>
+<li>
+<p><a href="https://github.com/asciidoctor/asciidoctor/blob/master/README-jp.adoc">Asciidoctor</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">変換例</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">markdown --[Pandoc]--&gt; docx
+markdown --[Pandoc]--&gt; docx
+asciidoc --[Asciidoctor]--&gt; HTML --[Pandoc]--&gt; docx
+asciidoc --[Asciidoctor]--&gt; pdf
+docx --[Pandoc]--&gt; asciidoc</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_visual_studio_code">Visual studio code</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/512px-Visual_Studio_Code_1.18_icon.svg.png" alt="VS Code" height="64">
+</div>
+</div>
+<div class="ulist">
+<div class="title">特徴</div>
+<ul>
+<li>
+<p>Microsoftが開発する無償のテキストエディタ</p>
+</li>
+<li>
+<p>機能拡張可能</p>
+</li>
+<li>
+<p>構文・スペルチェック機能あり</p>
+</li>
+<li>
+<p>Markup言語のプレビュー可能</p>
+</li>
+<li>
+<p>コード実行機能あり</p>
+</li>
+<li>
+<p>バージョン管理システムを包含</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_データ">データ</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">データの種類</div>
+<ul>
+<li>
+<p>ドキュメント</p>
+</li>
+<li>
+<p>測定データ</p>
+</li>
+<li>
+<p>解析用コード</p>
+</li>
+<li>
+<p>画像・動画・音声</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_データ管理">データ管理</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">データの配置</div>
+<ul>
+<li>
+<p>フォルダの役割を明確にする</p>
+</li>
+<li>
+<p>ファイルに分かりやすい名前をつける</p>
+</li>
+<li>
+<p>バージョン管理を行う</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">使用時の手間と不安を省くために</div>
+<ul>
+<li>
+<p>生データと加工データは分ける</p>
+</li>
+<li>
+<p>生データはできるだけ変更しない</p>
+</li>
+<li>
+<p>要約を作っておく</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>/📁root
+  |/📁data
+  |   |/📁src
+  |   |   - raw_data.xlsx
+  |   |   - readme.txt
+  |   |/📁edit
+  |       - computed_data.xlsx
+  |
+  |/📁project
+      |/📁data
+          |/📁src
+          |   - raw_data
+          |   - readme.txt
+          |/📁edit
+              - temporary_data</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_分析_解析">分析・解析</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>入力データ・処理内容・結果出力で一組</p>
+<div class="ulist">
+<ul>
+<li>
+<p>全ての段階を一括管理したい</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>共通のデータ, 処理内容</p>
+<div class="ulist">
+<ul>
+<li>
+<p>再利用可能なパーツとして扱いたい</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>様々なパターンの入力・処理内容の試行</p>
+<div class="ulist">
+<ul>
+<li>
+<p>バージョン管理が必要</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_excelの利点と欠点">Excelの利点と欠点</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">利点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>データ・解析・出力結果がワンセット</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">欠点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>(マクロ等使わなければ) 処理内容の可読性が低い</p>
+</li>
+<li>
+<p>データ・解析・出力結果の再利用が面倒</p>
+</li>
+<li>
+<p>データと結果を分けるのが面倒</p>
+</li>
+<li>
+<p>複雑な計算が面倒</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_プログラミングによる解決">プログラミングによる解決</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">R言語の例</div>
+<div class="content">
+<pre class="highlight"><code class="language-R" data-lang="R"># 入力データの読み込みと加工
+read.csv("../data/SVB/mineral/EPMA/opx_zoning_compile.csv") %&gt;%
+    subset(comment == "1002-9-1C-1_Line1") %&gt;%
+    .$Cr2O3 -&gt; y
+
+lambda &lt;- 0.1 # 正則化項の重み
+
+# FusedLasso法で組成プロファイルのトレンドを抽出するロジック
+# 入力データだけに依存
+y %&gt;%
+    fusedlasso1d %&gt;%
+    coef(lambda=lambda) %&gt;%
+    tee(function(coef){
+
+        plot(1:length(y), y)
+        lines(1:length(y), coef$beta)
+
+    }) %&gt;%
+    invisible</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">利点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>入力データ・解析・出力を抽象化することで再利用可能</p>
+</li>
+<li>
+<p>コードとして処理内容が可読</p>
+</li>
+<li>
+<p>テキストなのでバージョン管理が容易</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">欠点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>一般に, データ・解析・出力結果を別々に管理する必要<br>
+(ただし, これを可能にするツールはある)</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="ulist">
+<div class="title">データ分析などに人気の言語</div>
+<ul>
+<li>
+<p>Python</p>
+</li>
+<li>
+<p>R</p>
+</li>
+<li>
+<p>JavaScript</p>
+</li>
+<li>
+<p>Matlab (有償)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_visualization">Visualization</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">特徴</div>
+<ul>
+<li>
+<p>データ・分析と密接に結合</p>
+</li>
+<li>
+<p>探索を目的とする場合がある</p>
+</li>
+<li>
+<p>論文として報告するときスタイルの統一が必要</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_excelの利点と欠点_2">Excelの利点と欠点</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">利点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>簡単にグラフ化可能</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">欠点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>可視化の目的と手段の記録が困難</p>
+</li>
+<li>
+<p>見た目の変更の自動化が困難</p>
+</li>
+<li>
+<p>可視化の処理の再利用が困難</p>
+</li>
+<li>
+<p>図のスタイルの統一が困難</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_プログラミングコードの産物としての可視化">プログラミングコードの産物としての可視化</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">Excelシートや画像としての可視化結果は管理が大変</div>
+<ul>
+<li>
+<p>コメントを残しづらい</p>
+</li>
+<li>
+<p>バージョン管理が困難</p>
+</li>
+<li>
+<p>ファイルサイズの肥大化</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">プログラミングコード</div>
+<ul>
+<li>
+<p>可視化のロジックそのもの</p>
+</li>
+<li>
+<p>コメントをつけられる</p>
+</li>
+<li>
+<p>バージョン管理が容易</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_あるべきデータセットの構造">あるべきデータセットの構造</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>データセットは人間とコンピュータの両方が使う.<br>
+どちらにとっても利用しやすいデータを整備することが必要.</p>
+</li>
+<li>
+<p>同じデータセットを様々な解析に使うことが有るので, 再利用可能であることが望ましい.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">利用しやすいデータ</div>
+<ul>
+<li>
+<p>規則的な構造</p>
+</li>
+<li>
+<p>分かりやすい名前</p>
+</li>
+<li>
+<p>データ形式が統一的</p>
+</li>
+<li>
+<p>データの実体と見た目が一致している</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">region</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sampleNo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hasXenolith</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flowDirection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kagawa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">K-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kagawa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">K-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">True</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ehime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ehime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<div class="title">利用しにくいデータ</div>
+<ul>
+<li>
+<p>規則性が崩れた構造(歯抜け, セル結合)</p>
+</li>
+<li>
+<p>分かりにくい名前</p>
+</li>
+<li>
+<p>データ形式が統一されていない(Factorの名前, 0と空白データ)</p>
+</li>
+<li>
+<p>実データと計算結果の区別がつかない</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">region</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sampleNo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">捕獲岩</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flowDirection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock">Kagawa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">K-1 {="K-"+$id}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">K-2 {="K-"+$id}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">True</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">北東</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle" rowspan="2"><p class="tableblock">Ehime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E-1 {="E-"+$id}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_データセットの形式">データセットの形式</h2>
+<div class="sectionbody">
+<div class="dlist">
+<div class="title">データ構造による大別</div>
+<dl>
+<dt class="hdlist1">構造化データ</dt>
+<dd>
+<p>2次元表形式で表現可能. 各データレコードの列の個数や順番が一定</p>
+<div class="ulist">
+<ul>
+<li>
+<p>CSV</p>
+</li>
+<li>
+<p>Excelシート※</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">index</th>
+<th class="tableblock halign-left valign-top">region</th>
+<th class="tableblock halign-left valign-top">site</th>
+<th class="tableblock halign-left valign-top">rockType</th>
+<th class="tableblock halign-left valign-top">sample</th>
+<th class="tableblock halign-left valign-top">SiO2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kagawa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kiyama</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andesite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sample1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">57.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kagawa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goshikidai</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andesite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sample1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kagawa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kiyama</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andesite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sample2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">58.5</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre>SELECT SiO2
+FROM table
+      WHERE region IS Kagawa,
+      WHERE site IS Kiyama,
+      WHERE rockType IS andesite,
+      WHERE sample IS sample2
+&gt; 59.0</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">非構造化データ</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>規則的な構造をもつもの<br>
+データの入れ子があったり, 各レコード内のデータ数や種類が異なる場合がある.
+その一方で, 確実に一意にデータを取得できる.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML</p>
+</li>
+<li>
+<p>JSON</p>
+<div class="listingblock">
+<div class="title">JSONファイルの例</div>
+<div class="content">
+<pre>// データの階層構造や再帰構造を簡潔に表現可能
+{
+  Kagawa:{
+    Kiyama:{
+      andesite:[
+        {
+          compo:{SiO2:57.2}
+        },
+        {
+          compo:{SiO2:59.0}
+        }
+      ]
+    },
+    Goshikidai:{
+      andesite:[
+        sample1:{
+          compo:{SiO2:58.5}
+        }
+      ]
+    }
+  }
+}
+
+// Kagawa.Kiyama.andesite[1].compo.SiO2 is 59.0</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>規則的な構造を持たないもの</p>
+<div class="ulist">
+<ul>
+<li>
+<p>テキスト</p>
+</li>
+<li>
+<p>画像</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_研究に有用なプログラミング言語">研究に有用なプログラミング言語</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">紹介する言語</div>
+<ul>
+<li>
+<p>R</p>
+</li>
+<li>
+<p>Python</p>
+</li>
+<li>
+<p>JavaScript</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">共通の特徴</div>
+<ul>
+<li>
+<p>実行環境の構築が比較的容易</p>
+</li>
+<li>
+<p>OSによらず同じコードを使い回せる</p>
+</li>
+<li>
+<p>コンパイル無しで実行可能</p>
+</li>
+<li>
+<p>「型」の制約が少ない</p>
+</li>
+<li>
+<p>Excelシートやcsv, jsonといった様々なデータ形式を扱える</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">利点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>試行錯誤のスピードを早くできる</p>
+</li>
+<li>
+<p>アルゴリズムに集中できる</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">欠点</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>処理速度で不利</p>
+</li>
+<li>
+<p>データ形式に起因する思わぬバグの可能性</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>計算負荷の高い部分をC言語やFortranに委譲することも可能</p>
+</li>
+<li>
+<p>型をつけられる方言もある</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. 各言語の特徴</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaScript</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">統計</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">△</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">科学計算</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◯</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">△</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">テキスト処理</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">△</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GUIアプリ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">△</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◯</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">可視化</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>静的</p>
+</li>
+<li>
+<p>カスタマイズ性十分</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>静的・インタラクティブ</p>
+</li>
+<li>
+<p>カスタマイズ性十分</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>静的・インタラクティブ</p>
+</li>
+<li>
+<p>カスタマイズ性高いが難しい</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使いやすさ</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>構文が特徴的(ベクトル計算, 関数的)</p>
+</li>
+<li>
+<p>日本語の情報はやや少ない</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>基本構文が簡潔</p>
+</li>
+<li>
+<p>日本語・英語共に情報が多い</p>
+</li>
+<li>
+<p><strong>Excelマクロで使えるようになる予定</strong></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>日本語・英語共に情報が多い</p>
+</li>
+<li>
+<p>発展途上</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jupyter">Jupyter</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="http://jupyter.org/assets/main-logo.svg" alt="Jupyter" height="64">
+</div>
+</div>
+<div class="ulist">
+<div class="title">Jupyterとは</div>
+<ul>
+<li>
+<p>Pythonのライブラリの一つ</p>
+</li>
+<li>
+<p>試行錯誤的なプログラミングを支援する</p>
+</li>
+<li>
+<p>notebook, labというグラフィカルなプログラミング環境を提供する</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><a href="http://jupyter.org/">Project Jupyter | Home</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_記録ツールとしてのjupyter_notebook">記録ツールとしてのJupyter notebook</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">特徴</div>
+<ul>
+<li>
+<p>Webブラウザ上で動作する</p>
+</li>
+<li>
+<p>ドキュメント, プログラム内容, 実行結果をひとまとめにできる</p>
+</li>
+<li>
+<p>プログラムを"Cell"単位で一塊ずつ定義し, 実行できる</p>
+</li>
+<li>
+<p>Python, R, javascriptなど多数の言語に対応</p>
+</li>
+<li>
+<p>インタラクティブな可視化が可能</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./image/2018-04-21-16-50-21.png" alt="2018 04 21 16 50 21">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_r_studio">R studio</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-250.png" alt="R studio" height="64">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>R言語のための統合開発環境</p>
+</li>
+<li>
+<p>RにおけるJupyter notebook</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><a href="https://www.rstudio.com/">RStudio – Open source and enterprise-ready professional software for R</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_多次元データの可視化">多次元データの可視化</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>岩石や鉱物の化学組成のような高次元データを可視化する</p>
+</li>
+<li>
+<p>多数のバイナリプロットで表現</p>
+<div class="ulist">
+<ul>
+<li>
+<p>プロットをまたいだデータ間の対応</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>マグマ混合や結晶分別, 部分溶融モデルの可視化</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fumiposでの実装例">FUMIPOSでの実装例</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JavaScript + HTMLによる
+:stem: latexmath</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_文献管理">文献管理</h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title">文献管理ソフト</div>
+<ul>
+<li>
+<p><a href="https://www.readcube.com/">ReadCube</a></p>
+</li>
+<li>
+<p><a href="http://jp.elsevier.com/online-tools/mendeley">Mendeley</a></p>
+</li>
+<li>
+<p>Endnote</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">機能</div>
+<ul>
+<li>
+<p>文献の分類</p>
+</li>
+<li>
+<p>文献閲覧</p>
+</li>
+<li>
+<p>文献検索</p>
+</li>
+<li>
+<p>引用情報の抽出と編集</p>
+</li>
+<li>
+<p>引用リスト作成</p>
+<div class="ulist">
+<ul>
+<li>
+<p>BiBTeXの出力</p>
+</li>
+<li>
+<p>Wordへの出力</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bibtex">BiBTeX</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-tex" data-lang="tex">@article{
+  auther = Fumitoshi Morisato;
+  title = My paper;
+  journal = U-Tokyo Journal;
+  year = 2018;
+  volume = 1;
+  number = 1;
+  pages = 1-10;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Google Scholarを用いてBiBTeXなどの引用情報を取得可能</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_研究のバージョン管理">研究のバージョン管理</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>以前の状態に復元できるか</p>
+</li>
+<li>
+<p>何を変更したか思い出せるか</p>
+</li>
+<li>
+<p>バージョン間の関係はどうなっているか</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">バージョンの乱立</div>
+<div class="content">
+<pre>analysis_original.xlsx
+
+analysis_2018_0422.xlsx
+analysis_2018_0422_modified.xlsx
+
+analysis_2018_0423.xlsx
+analysis_2018_0423_modified.xlsx
+analysis_2018_0423_test.xlsx
+analysis_2018_0423_modified_test.xlsx
+...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_バージョン管理への欲求">バージョン管理への欲求</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ファイルをいたずらに増やしたくない</p>
+</li>
+<li>
+<p>時系列に沿った全ての変更履歴がほしい</p>
+</li>
+<li>
+<p>枝分かれするバージョン間の親子関係を知りたい</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git">Git</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="https://git-scm.com/images/logo@2x.png" alt="Git" height="64"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>バージョン管理システムのスタンダード</p>
+</li>
+<li>
+<p>ローカル環境に加え, クラウド上にもバージョン履歴を保存可能</p>
+</li>
+<li>
+<p>複数人数でも衝突無くバージョン管理が可能</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><a href="https://git-scm.com/">Git</a></p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_概要_2">概要</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>コマンドラインツール</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GUIツールもある</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>変更記録時には必ずコメントが必要</p>
+</li>
+<li>
+<p>記録された任意の時点の状態を復元可能</p>
+<div class="ulist">
+<ul>
+<li>
+<p>テキスト形式データとの相性がいい</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>バージョンの枝分かれを記録可能</p>
+</li>
+<li>
+<p>バージョン間の差分を表示可能</p>
+</li>
+<li>
+<p>複数人による変更を自動反映可能</p>
+<div class="ulist">
+<ul>
+<li>
+<p>変更の衝突時はそれぞれ反映するものを選択可能</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gitの利用例">Gitの利用例</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>一方こちらは"master"ブランチで編集した部分.
+"test_git"ブランチで変更した部分はまだ反映されていない.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-04-23 08:20:59 東京 (標準時)
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>
