@@ -1,7 +1,21 @@
 
-== image:./image/Word.png[Word,64,64]
+== image:./image/Word.png[Word,height=64]
 
-.特徴
-* 校閲機能が充実
-* スペルチェックなどの機能拡張が可能
 
+== Wordをうまく使う
+
+* スタイルの適用とアウトライン
+  ** 見出しや段落, 図のキャプションなどのスタイルを指定できる +
+  見た目を一括で変更できる
+* 変数の使用
+  ** 図表番号など, 連番を自動で振る機能がある
+  ** 表記が変わる可能性がある語句について, ブックマーク(相互参照)を挿入すれば, 参照元の1箇所のみの変更で全体に反映できる
+* 数式 
+  ** \(\LaTeX{}\)の記法が使えるようになる
+
+== Wordをより便利にするツール
+
+英文校正ツール::
+  image:https://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg[grammarly, height=50]
+
+image::./image/2018-04-22-15-45-33.png[]

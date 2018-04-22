@@ -1,0 +1,130 @@
+
+== あるべきデータセットの構造
+
+* データセットは人間とコンピュータの両方が使う. +
+どちらにとっても利用しやすいデータを整備することが必要.
+* 同じデータセットを様々な解析に使うことが有るので, 再利用可能であることが望ましい.
+
+.利用しやすいデータ
+* 規則的な構造
+* 分かりやすい名前
+* データ形式が統一的
+* データの実体と見た目が一致している
+
+[format=csv]
+|===
+id, region, sampleNo, hasXenolith, flowDirection
+1, Kagawa, K-1, False, NE
+2, Kagawa, K-2, True, NE
+3, Ehime,  E-1, False, NA
+4, Ehime,  E-2, False, N
+|===
+
+.利用しにくいデータ
+* 規則性が崩れた構造(歯抜け, セル結合)
+* 分かりにくい名前
+* データ形式が統一されていない(Factorの名前, 0と空白データ)
+* 実データと計算結果の区別がつかない
+
+[cols=5]
+|===
+|region        | |sampleNo |捕獲岩 | flowDirection
+1.2+^.^|Kagawa |1  |K-1 {="K-"+$id}|            | NE 
+               |2  |K-2 {="K-"+$id}| True       | 北東
+1.2+^.^|Ehime  |1  |E-1 {="E-"+$id}| False      | -
+               |2  |E-2            | False      | N
+|===
+
+
+
+== データセットの形式
+
+.データ構造による大別
+構造化データ::
+  2次元表形式で表現可能. 各データレコードの列の個数や順番が一定
++
+  ** CSV
+  ** Excelシート※
++
+[format="csv", options="header"]
+|===
+index, region, site,rockType, sample, SiO2
+1, Kagawa, Kiyama, andesite, sample1, 57.2
+2, Kagawa, Goshikidai, andesite, sample1, 59.0
+3, Kagawa, Kiyama, andesite, sample2, 58.5
+|===
++
+----
+SELECT SiO2 
+FROM table 
+      WHERE region IS Kagawa, 
+      WHERE site IS Kiyama,
+      WHERE rockType IS andesite,
+      WHERE sample IS sample2
+> 59.0
+----
++
+非構造化データ::
+  ** 規則的な構造をもつもの +
+  データの入れ子があったり, 各レコード内のデータ数や種類が異なる場合がある.
+  その一方で, 確実に一意にデータを取得できる.
+    *** HTML
+    *** JSON
++
+.JSONファイルの例
+[source=json]
+----
+// データの階層構造や再帰構造を簡潔に表現可能
+{
+  Kagawa:{
+    Kiyama:{
+      andesite:[
+        {
+          compo:{SiO2:57.2}
+        },
+        {
+          compo:{SiO2:59.0}
+        }
+      ]
+    },
+    Goshikidai:{
+      andesite:[
+        sample1:{
+          compo:{SiO2:58.5}
+        }
+      ]
+    }
+  }
+}
+
+// Kagawa.Kiyama.andesite[1].compo.SiO2 is 59.0
+----
+
+  ** 規則的な構造を持たないもの
+    *** テキスト
+    *** 画像
+
+== データ管理
+
+.使用時の手間と不安を省くために
+* 生データと加工データは分ける
+* 生データはできるだけ変更しない
+* 要約を作っておく
+
+----
+/📁root
+  |/📁data
+  |   |/📁src
+  |   |   - raw_data.xlsx
+  |   |   - readme.txt
+  |   |/📁edit
+  |       - computed_data.xlsx
+  |
+  |/📁project
+      |/📁data
+          |/📁src
+          |   - raw_data
+          |   - readme.txt
+          |/📁edit
+              - temporary_data
+----

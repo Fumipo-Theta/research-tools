@@ -1,5 +1,5 @@
 
-== image:https://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg[Grammarly, height=64]
+== image:https://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg[Grammarly, height=64] 
 
 .特徴
 * オンラインの英文のスペル・構文チェックサービス
@@ -9,3 +9,5 @@
 * 有料版では機能が増える
   ** 論文やビジネスなど状況に合わせた修正案の提示
   ** 語彙の提案
+
+> https://www.grammarly.com/[Grammarly: Free Writing Assistant] 

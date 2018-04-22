@@ -1,4 +1,7 @@
 
-== R studioとは
+== image:https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-250.png[R studio, height=64]
 
+* R言語のための統合開発環境
 * RにおけるJupyter notebook
+
+> https://www.rstudio.com/[RStudio – Open source and enterprise-ready professional software for R]

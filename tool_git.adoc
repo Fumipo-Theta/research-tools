@@ -1,9 +1,11 @@
 
-== image:https://git-scm.com/images/logo@2x.png[Git, 64,64]
+== image:https://git-scm.com/images/logo@2x.png[Git, height=64]
 
 * バージョン管理システムのスタンダード
 * ローカル環境に加え, クラウド上にもバージョン履歴を保存可能
 * 複数人数でも衝突無くバージョン管理が可能
+
+> https://git-scm.com/[Git]
 
 == 概要
 
@@ -16,3 +18,6 @@
 * バージョン間の差分を表示可能
 * 複数人による変更を自動反映可能
   ** 変更の衝突時はそれぞれ反映するものを選択可能
+
+
+ 

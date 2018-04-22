@@ -1,12 +1,14 @@
 
-== 研究記録ツールとしてのJupyter
+== image:http://jupyter.org/assets/main-logo.svg[Jupyter,height=64]
 
 .Jupyterとは
 * Pythonのライブラリの一つ
 * 試行錯誤的なプログラミングを支援する
 * notebook, labというグラフィカルなプログラミング環境を提供する
 
-== Jupyter notebook, JupyterLab
+> http://jupyter.org/[Project Jupyter | Home]
+
+== 記録ツールとしてのJupyter notebook
 
 .特徴
 * Webブラウザ上で動作する
@@ -14,3 +16,5 @@
 * プログラムを"Cell"単位で一塊ずつ定義し, 実行できる
 * Python, R, javascriptなど多数の言語に対応
 * インタラクティブな可視化が可能
+
+image::./image/2018-04-21-16-50-21.png[]
